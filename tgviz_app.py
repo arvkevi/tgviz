@@ -1,6 +1,5 @@
 import umap
 
-mkl-random==1.0.2
 import dash_core_components as dcc
 import dash_html_components as html
 import numpy as np
