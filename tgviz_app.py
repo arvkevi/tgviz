@@ -1,5 +1,6 @@
 import umap
 
+mkl-random==1.0.2
 import dash_core_components as dcc
 import dash_html_components as html
 import numpy as np
@@ -185,7 +186,7 @@ def tgviz_callbacks(app):
                 y=val.loc[:, 'y'],
                 z=val.loc[:, 'z'],
                 text=[idx for _ in range(val.loc[:, 'x'].shape[0])],
-                textposition='top right',
+                textposition='middle right',
                 mode='markers',
                 marker=dict(
                     size=4,
