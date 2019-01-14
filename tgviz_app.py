@@ -84,7 +84,7 @@ tgviz_layout = html.Div(
         # Header
         html.Div(className="row", children=[
             html.H3(
-                'Population Visualizations from the 1000 Genomes Project',
+                '1000 Genomes Project Population Visualizations',
                 id='title',
                 style={
                     'float': 'left',
@@ -227,7 +227,7 @@ def tgviz_callbacks(app):
             One of {pca, umap, tsne}
         :type algorithm: str
 
-        :returns: The transformed X[m, n] array, reduced to X[m, n_components] by algorithm.
+        :returns: The transformed X DataFrame, reduced to 3 components by <algorithm>.
         """
         ncols = len(df.columns)
         ohe = OneHotEncoder(categories=[range(4)] * ncols, sparse=False)
@@ -253,6 +253,7 @@ def tgviz_callbacks(app):
 
     @app.server.before_first_request
     def load_vcf_data():
+        """Load .vcf data into memory as a DataFrame."""
         global data_dict
 
         # convert to pandas DataFrame
@@ -269,8 +270,11 @@ def tgviz_callbacks(app):
                   [Input('radio-dataset', 'value'),
                    Input('radio-dim-red', 'value')])
     def encoded_df(dataset, algorithm):
+        """
+        Store the large DataFrame with all features
+        in the browser as a hidden Div.
+        """
         # Plot layout
-
         if dataset == 'Kidd_55':
             df = data_dict['kidd_data']
         elif dataset == 'Seldin_128':
@@ -320,6 +324,7 @@ def tgviz_callbacks(app):
         return figure
 
     def generate_table(dataframe, max_rows=1):
+        """Simple wrapper for displaying a table"""
         return html.Table(
             # Header
             [html.Tr([html.Th(col) for col in dataframe.columns])] +
@@ -346,6 +351,7 @@ def tgviz_callbacks(app):
                   [Input('browser-df', 'children'),
                    Input('graph-3d-plot', 'clickData'), ])
     def display_click_info(df, clickData):
+        """Detect the sample that was clicked."""
         df = pd.read_json(df, orient='split')
         try:
             # Convert the point clicked into float64 numpy array

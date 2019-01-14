@@ -35,7 +35,5 @@ This graph is a 3D scatter plot representing genotypes from the [1000 Genomes Pr
 When you click on a data point in the 3D graph, details such as `sample accession`, `population`, `super population`, and `gender` are displayed on the right. The sample-level information is accessible from `integrated_call_samples_v3.20130502.ALL.panel`, found [here](ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/).
 
 ### Code  
-The code used to process this data is available on [GitHub]().
-If interested in replicating this type of analysis, please follow along using the [notebooks]().
-
-Can be used as a package?  
+The code used to process this data is available on [GitHub](https://github.com/arvkevi/tgviz).
+If interested in replicating this type of analysis, please follow along using the [notebooks](https://github.com/arvkevi/tgviz/notebooks).
