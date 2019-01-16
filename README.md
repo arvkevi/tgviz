@@ -14,5 +14,10 @@ After landing on the site, please allow a few seconds for the application to sta
 
 Switching between `PCA` and `UMAP` dimensionality reduction algorithms are relatively quick, however selecting `TSNE` takes 15-20 seconds to load. `TSNE` is
 
+### Project Personal Genotypes
+The [plot_walkthrough.ipynb](https://github.com/arvkevi/tgviz/blob/master/notebooks/plot_walkthrough.ipynb) in the notebooks directory outlines how to project genotype data from your own `.vcf` into this space.
+![mev1kgp](me_vs_1kgp.png)
+
+
 ### Contributing
 Contributions are welcome, if you find a bug or an inaccuracy, submit an issue, if you would like work on an open issue, or improve the app, submit a Pull Request.
