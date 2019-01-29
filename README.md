@@ -7,7 +7,7 @@ This app and supporting jupyter notebooks (in `notebooks/`) provide Python funct
 
 tgviz is an interactive visualization app built in Python with [Dash](https://plot.ly/products/dash/) and [deployed](https://dash.plot.ly/deployment) on [Heroku](https://heroku.com). Developing this app was an opportunity to familiarize myself with the Dash framework. Be sure to read the `README` below the visualization on the app page to see more details.
 
-![screenshot](tgviz_screenshot.png)
+![gif](tgviz_gif.gif)
 
 ### App Performance
 After landing on the site, please allow a few seconds for the application to start.
