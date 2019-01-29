@@ -12,10 +12,12 @@ tgviz is an interactive visualization app built in Python with [Dash](https://pl
 ### App Performance
 After landing on the site, please allow a few seconds for the application to start.
 
-Switching between `PCA` and `UMAP` dimensionality reduction algorithms are relatively quick, however selecting `TSNE` takes 15-20 seconds to load. `TSNE` is
+Switching between `PCA` and `UMAP` dimensionality reduction algorithms are relatively quick, however selecting `TSNE` takes 15-20 seconds to load.
 
 ### Project Personal Genotypes
-The [plot_walkthrough.ipynb](https://github.com/arvkevi/tgviz/blob/master/notebooks/plot_walkthrough.ipynb) in the notebooks directory outlines how to project genotype data from your own `.vcf` into this space.
+The [plot_walkthrough.ipynb](https://github.com/arvkevi/tgviz/blob/master/notebooks/plot_walkthrough.ipynb) in the notebooks directory outlines how to project genotype data from your own `.vcf` into the 1000 Genomes Project population space.
+
+
 ![mev1kgp](me_vs_1kgp.png)
 
 
